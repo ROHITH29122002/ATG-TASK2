@@ -8,6 +8,9 @@ var extrapara1 = document.querySelector('.extrapara1')
 var extrapara2 = document.querySelector('.extrapara2')
 var extrapara3 = document.querySelector('.extrapara3')
 var svg = document.querySelector('#transring')
+var carousel = document.querySelector('.carousel')
+var carouselitems = document.querySelectorAll('.carousel_div')
+
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -96,7 +99,6 @@ gsap.to('.container-4',{
         scrub : true,
     },
     onUpdate : () => {
-        console.log('4');
         path.style.cssText += 'stroke-dasharray: 410, 1000'
         para1.innerHTML = 'Powered by advance'
         text.innerHTML = 'NASA'
@@ -159,3 +161,26 @@ gsap.to('.container-7',{
         svg.style.cssText += 'background-color : rgb(122, 33, 224)'
     }
 })
+
+const buttonHtml = Array.from(carouselitems,()=>{
+    return `<span class='carousel_btn'></span>`;
+})
+
+carousel.insertAdjacentHTML('beforeend',`
+<div class='carousel_nav'>
+  ${buttonHtml.join('')}
+</div>
+`)
+
+var buttons = carousel.querySelectorAll('.carousel_btn');
+buttons.forEach((button,i)=>{
+    button.addEventListener('click',()=>{
+        carouselitems.forEach(item => item.classList.remove('carousel_div_selected'))
+        buttons.forEach(button => button.classList.remove('carousel_btn_selected'))
+        carouselitems[i].classList.add('carousel_div_selected')
+        button.classList.add('carousel_btn_selected')
+    })
+})
+
+carouselitems[0].classList.add('carousel_div_selected')
+buttons[0].classList.add('carousel_btn_selected')

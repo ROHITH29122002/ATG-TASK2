@@ -46,7 +46,7 @@ body{
 }
 
 .container{
-  width: 99%;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
   z-index: -10;
@@ -86,15 +86,30 @@ body{
   font-size: 1.5rem;
 }
 
-.bread-1,.bread-2,.mobile-1,.mobile-2,.box{
+.mobile-1,.mobile-2,.box{
   position: absolute;
   right: 0;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 300px;
 }
 
-.mobile-1{
-  bottom: -20%;
+.box{
+  top: -10%;
+  right: 43rem;
+}
+
+.container-1 .mobile-1{
+  width: 220px;
+  height: 300px;
+  right: 30rem;
+  bottom: 0;
+}
+
+.container-1 .mobile-2{
+  top: 5rem;
+  right: 5rem;
+  width: 200px;
+height: 400px;
 }
 
 .container-2 .mobile-1{
@@ -142,7 +157,7 @@ body{
   top: 10rem;
 }
 
-.mobile-3{
+.container-5 .mobile-3{
   position: absolute;
   width: 200px;
   height: 400px;
@@ -177,4 +192,52 @@ body{
   height: 450px;
   right: 5rem;
   bottom: 10%;
+}
+
+.mob_version{
+  display: none;
+}
+
+@media screen and (max-width : 900px){
+  .lap_version{
+    display: none;
+  }
+  .mob_version{
+    display: flex;
+  }
+  .carousel{
+    position: relative;
+    width: 100%;
+  }
+  .carousel_div{
+    height: 100vh; 
+    background-color: grey;
+    display: none;
+  }
+
+  .carousel_div_selected{
+    display: block;
+  }
+
+  .carousel_nav{
+    width: 100%;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+  }
+
+  .carousel_btn{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    margin : 0 .5rem;
+    cursor: pointer;
+  }
+  .carousel_btn_selected{
+    background-color: rgba(255,255,255,0.5);
+  }
 }
