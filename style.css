@@ -1,0 +1,180 @@
+*,
+*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    line-height: 1.5;
+}
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+.path_container{
+  position: fixed;
+  width: 50%;
+  height: 100vh;
+  padding: 2rem;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(4, 4, 50);
+}
+
+#transring{
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  position: absolute;
+  left: 60%;
+}
+
+.all_div{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  scroll-snap-type: y mandatory;
+}
+
+.container{
+  width: 99%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -10;
+}
+
+.text_container{
+  color: #fff;
+  z-index: 1000;
+  position: relative;
+  left: 17rem;
+}
+
+.text{
+  font-size: 4rem;
+}
+
+.para1,.para2{
+  font-size: 1.5rem;
+}
+
+.para2{
+  text-align: end;
+}
+
+.extra_container{
+  position: absolute;
+  bottom: 6rem;
+  left: 4rem;
+  color: #fff;
+}
+
+.extraheading{
+  font-size: 3rem;
+}
+
+.extrapara{
+  font-size: 1.5rem;
+}
+
+.bread-1,.bread-2,.mobile-1,.mobile-2,.box{
+  position: absolute;
+  right: 0;
+  width: 100px;
+  height: 100px;
+}
+
+.mobile-1{
+  bottom: -20%;
+}
+
+.container-2 .mobile-1{
+  width: 250px;
+  height: 300px;
+  right: 30rem;
+  bottom: 0;
+}
+
+.container-2 .mobile-2{
+  width: 200px;
+  height: 300px;
+  right: 5rem;
+}
+
+.shop{
+  position: absolute;
+  top: -20%;
+  right: -7rem;
+}
+
+.container-4 .mobile-1{
+  width: 250px;
+  height: 400px;
+  right: 30rem;
+  bottom: 0;
+}
+
+.container-4 .mobile-2{
+  width: 200px;
+  height: 400px;
+  right: 5rem;
+}
+
+.container-5 .mobile-1{
+  width: 200px;
+  height: 400px;
+  right: 20rem;
+  top: -10%;
+}
+
+.container-5 .mobile-2{
+  width: 200px;
+  height: 400px;
+  top: 10rem;
+}
+
+.mobile-3{
+  position: absolute;
+  width: 200px;
+  height: 400px;
+  right: 40rem;
+  top: -25%;
+}
+
+.container-6 .mobile-1{
+  width: 250px;
+  height: 450px;
+  right: 30rem;
+  bottom: -10%;
+}
+
+.container-6 .mobile-2{
+  width: 300px;
+  height: 450px;
+  right: 5rem;
+  bottom: -5%;
+}
+
+
+.container-7 .mobile-1{
+  width: 300px;
+  height: 450px;
+  right: 30rem;
+  bottom: 10%;
+}
+
+.container-7 .mobile-2{
+  width: 300px;
+  height: 450px;
+  right: 5rem;
+  bottom: 10%;
+}
